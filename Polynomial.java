@@ -1,12 +1,16 @@
 public class Polynomial {
-    private double[] coefficients;
+    public double[] coefficients;
 
     public Polynomial() {
         coefficients = new double[]{0};
     }
 
     public Polynomial(double[] coefficients) {
-        this.coefficients = coefficients;
+        if (coefficients == null || coefficients.length == 0) {
+            this.coefficients = new double[]{0};
+            return;
+        }
+        this.coefficients = coefficients.clone();
     }
 
     public Polynomial add(Polynomial poly) {
@@ -24,7 +28,7 @@ public class Polynomial {
         return sum;
     }
 
-    boolean hasRoot(double x) {
+    public boolean hasRoot(double x) {
         return evaluate(x) == 0;
     }
 
