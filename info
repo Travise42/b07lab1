@@ -1,1 +1,5 @@
-Will be adding to this throughout the lab.
+Lab #1 consists of a Polynomials class that
+- stores its coefficients,
+- can add itself to another polynomial,
+- can evaluate its value at some x value,
+- and can check whether it has a root at a certain x value
