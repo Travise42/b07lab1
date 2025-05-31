@@ -9,8 +9,8 @@ public class Polynomial {
     public int[] exponents;
 
     public Polynomial() {
-        coefficients = new double[]{0};
-        exponents = new int[]{0};
+        coefficients = new double[0];
+        exponents = new int[0];
     }
 
     public Polynomial(double[] coefficients, int[] exponents) {
@@ -135,7 +135,9 @@ public class Polynomial {
     public String toString() {
         
         // No exponents means the polynomial is 0
-        if (exponents.length == 0) return "0";
+        if (exponents.length == 0) {
+            return "0.0";
+        }
 
         // Create polynomial string by iterating through each term
         String string = "";
@@ -145,7 +147,7 @@ public class Polynomial {
             if (i > 0 && coefficients[i] > 0) string += "+";
 
             // Append the term to string, only including x if the exponent is not 0 and only including the exponent if its 2 or more
-            string += String.valueOf(coefficients[i]);
+            if (coefficients[i] != 1) string += String.valueOf(coefficients[i]);
             if (exponents[i] > 0) string += "x";
             if (exponents[i] > 1) string += String.valueOf(exponents[i]);
         }
