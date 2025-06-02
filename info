@@ -3,3 +3,11 @@ Lab #1 consists of a Polynomials class that
 - can add itself to another polynomial,
 - can evaluate its value at some x value,
 - and can check whether it has a root at a certain x value
+
+Lab #2 consists of modifications to the Polynomials class:
+- replace array of coefficents with two arrays representing coefficients and their respective exponents
+  (this allows for polynomials of high degrees without the use of a large amount of space)
+- update methods from Lab #1 to use the modified arrays
+- create a mutliply method that multiplies polynomials and returns the result
+- add a constructor that creates a polynomial object from a file
+- add a method to save the poynomial to a file
